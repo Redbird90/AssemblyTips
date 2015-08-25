@@ -32,7 +32,6 @@ public class MainActivity extends ActionBarActivity {
                 millisRemaining = millisUntilFinished;
                 String prefix = "Time Remaining: ";
                 textViewTimer.setText(prefix + millisUntilFinished / 1000);
-                textViewProgress.setText("Assembly In Progress... Please Stand By");
             }
 
             @Override
@@ -52,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
                 countDownTimer.start();
                 startButton.setEnabled(false);
                 pauseButton.setEnabled(true);
+                textViewProgress.setText("Assembly In Progress... Please Stand By");
             }
         });
 
